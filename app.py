@@ -56,7 +56,7 @@ if press:
             
                 
         with st.container(border = True):
-            st.subheader(f"Quize {select} level difficulty show below")
+            st.subheader(f"Quiz {select} level difficulty show below")
             with st.spinner("Quizzes are making..."):
                 quizes = qz(pil_image,select)
                 st.text(quizes)
