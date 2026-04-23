@@ -18,7 +18,7 @@ def note_generator(images):
     return response.text
     
 def quize_generator(images , info):
-    prompt =f"Generate 25 quizzes based on {info} and avoid markdown"
+    prompt =f"Generate 25 quizzes with answers based on {info} and avoid markdown"
     response = client.models.generate_content(
     model="gemini-3.1-flash-lite-preview",
     contents=[images , prompt]
