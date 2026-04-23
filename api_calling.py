@@ -18,10 +18,7 @@ def note_generator(images):
     return response.text
     
 def quize_generator(images , info):
-    prompt ="""Evaluate the provided source material to construct an advanced assessment consisting of 25 high-order thinking questions. 
-    The set must include a balanced mix of conceptual application and critical analysis. 
-    Follow each question immediately with its definitive answer. Ensure the output is rendered in a clean, stream-of-text format, 
-    strictly avoiding all markdown formatting and symbols."""
+    prompt =f"Generate 25 quizzes based on {info} and avoid markdown"
     response = client.models.generate_content(
     model="gemini-3.1-flash-lite-preview",
     contents=[images , prompt]
